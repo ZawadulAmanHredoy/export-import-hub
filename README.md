@@ -34,4 +34,4 @@ React client deployed on **Firebase Hosting**, connected to the Vercel API.
 ### 1) Install dependencies
 bash
 cd client
-npm install
+npm instal
