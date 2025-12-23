@@ -13,7 +13,7 @@ React client deployed on **Firebase Hosting**, connected to the Vercel API.
 
 - View all products (public).
 - Add export products (requires login).
-- Import products (requires login)
+- Import products (requires login).
 - View My Exports / My Imports (requires login).
 - Firebase Authentication
 - Axios API client with auto token attach.
