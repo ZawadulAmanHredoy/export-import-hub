@@ -22,7 +22,7 @@ React client deployed on **Firebase Hosting**, connected to the Vercel API.
 
 ## Tech Stack
 
-- React (Vite)
+- React (Vite).
 - Firebase Auth
 - Axios
 - Deployed on Firebase Hosting
