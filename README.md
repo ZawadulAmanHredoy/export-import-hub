@@ -11,7 +11,7 @@ React client deployed on **Firebase Hosting**, connected to the Vercel API.
 
 ## Features
 
-- View all products (public)
+- View all products (public).
 - Add export products (requires login)
 - Import products (requires login)
 - View My Exports / My Imports (requires login)
