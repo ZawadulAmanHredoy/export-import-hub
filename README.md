@@ -5,7 +5,7 @@
 
 # Import Export Hub — Client (Frontend)
 
-React client deployed on **Firebase Hosting**, connected to the Vercel API.
+React client deployed on **Firebase Hosting**, connected to the Vercel API
 
 ---
 
