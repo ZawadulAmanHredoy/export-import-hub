@@ -1,7 +1,9 @@
+// client/src/components/Navbar.jsx
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { useAuth } from "../providers/AuthProvider.jsx";
-import ThemeToggle from "./ThemeToggle.jsx";
 import toast from "react-hot-toast";
+
+import ThemeToggle from "./ThemeToggle.jsx";
+import { useAuth } from "../providers/AuthProvider.jsx";
 
 const navClass = ({ isActive }) =>
   isActive
@@ -31,10 +33,26 @@ export default function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
-            <NavLink to="/products" className={navClass}>All Products</NavLink>
-            <NavLink to="/my-exports" className={navClass}>My Exports</NavLink>
-            <NavLink to="/my-imports" className={navClass}>My Imports</NavLink>
-            <NavLink to="/add-export" className={navClass}>Add Export</NavLink>
+            <NavLink to="/products" className={navClass}>
+              All Products
+            </NavLink>
+
+            {user ? (
+              <>
+                <NavLink to="/dashboard" className={navClass}>
+                  Dashboard
+                </NavLink>
+                <NavLink to="/my-exports" className={navClass}>
+                  My Exports
+                </NavLink>
+                <NavLink to="/my-imports" className={navClass}>
+                  My Imports
+                </NavLink>
+                <NavLink to="/add-export" className={navClass}>
+                  Add Export
+                </NavLink>
+              </>
+            ) : null}
           </nav>
         </div>
 
@@ -49,7 +67,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <img
                 src={user.photoURL || "https://i.ibb.co/0jZQZ6R/user.png"}
-                alt="user"
+                alt="User"
                 className="w-9 h-9 rounded-full object-cover border border-slate-200 dark:border-slate-700"
                 referrerPolicy="no-referrer"
               />
@@ -61,11 +79,28 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile nav */}
       <div className="md:hidden container-x pb-3 flex flex-wrap gap-2">
-        <NavLink to="/products" className={navClass}>All Products</NavLink>
-        <NavLink to="/my-exports" className={navClass}>My Exports</NavLink>
-        <NavLink to="/my-imports" className={navClass}>My Imports</NavLink>
-        <NavLink to="/add-export" className={navClass}>Add Export</NavLink>
+        <NavLink to="/products" className={navClass}>
+          All Products
+        </NavLink>
+
+        {user ? (
+          <>
+            <NavLink to="/dashboard" className={navClass}>
+              Dashboard
+            </NavLink>
+            <NavLink to="/my-exports" className={navClass}>
+              My Exports
+            </NavLink>
+            <NavLink to="/my-imports" className={navClass}>
+              My Imports
+            </NavLink>
+            <NavLink to="/add-export" className={navClass}>
+              Add Export
+            </NavLink>
+          </>
+        ) : null}
       </div>
     </header>
   );
